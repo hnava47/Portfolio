@@ -12,13 +12,13 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import { mainListItems, secondaryListItems } from './listItems';
-import Deposits from './Deposits';
 
 import {
     AppBar,
     Drawer,
-    Contact
+    Contact,
+    mainListItems,
+    secondaryListItems
 } from '../components'
 
 const mdTheme = createTheme();
@@ -118,7 +118,6 @@ export const DashboardContent = () => {
                     height: 240,
                   }}
                 >
-                  <Deposits />
                 </Paper>
               </Grid>
               {/* Recent Orders */}

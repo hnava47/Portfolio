@@ -82,3 +82,5 @@ export const Contact = () => {
         </Fragment>
   );
 }
+
+export default Contact;

@@ -16,7 +16,7 @@ export const mainListItems = (
     <Fragment>
         <ListItemButton>
             <ListItemIcon>
-                <Avatar alt="Remy Sharp" src={image} sx={{ width: 30, height: 30 }}/>
+                <Avatar alt="Remy Sharp" src={image} sx={{ width: 25, height: 25 }}/>
             </ListItemIcon>
             <ListItemText primary="Introduction" />
         </ListItemButton>

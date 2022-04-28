@@ -29,15 +29,15 @@ export const Skills = () => {
             direction="row"
             justifyContent="center"
           >
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={python} width="20" height="20" style={{ marginRight: 5 }} alt='Python logo'/>
                 Python
             </Button>
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={javascript} width="20" height="20" style={{ marginRight: 5 }} alt='JavaScript logo'/>
                 JavaScript
             </Button>
-            <Button variant="outlined" >SQL</Button>
+            <Button variant="outlined" style={{ cursor: 'default' }}>SQL</Button>
           </Stack>
           <Stack
             spacing={2}
@@ -47,15 +47,15 @@ export const Skills = () => {
             direction="row"
             justifyContent="center"
           >
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={react} width="20" height="20" style={{ marginRight: 5 }} alt='React logo'/>
                 ReactJS
             </Button>
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={node} width="20" height="20" style={{ marginRight: 5 }} alt='Node logo'/>
                 NodeJS
             </Button>
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={express} width="20" height="20" style={{ marginRight: 5 }} alt='Express logo'/>
                 ExpressJS
             </Button>
@@ -68,15 +68,15 @@ export const Skills = () => {
             direction="row"
             justifyContent="center"
           >
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={html} width="20" height="20" style={{ marginRight: 5 }} alt='HTML logo'/>
                 HTML5
             </Button>
-            <Button variant="outlined" >
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={css} width="20" height="20" style={{ marginRight: 5 }} alt='CSS logo'/>
                 CSS3
             </Button>
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={bootstrap} width="20" height="20" style={{ marginRight: 5 }} alt='Bootstrap logo'/>
                 Bootstrap
             </Button>
@@ -89,15 +89,15 @@ export const Skills = () => {
             direction="row"
             justifyContent="center"
           >
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={materialui} width="20" height="20" style={{ marginRight: 5 }} alt='MaterialUI logo'/>
                 MaterialUI
             </Button>
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={mysql} width="20" height="20" style={{ marginRight: 5 }} alt='MySQL logo'/>
                 MySQL
             </Button>
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={mongodb} width="20" height="20" style={{ marginRight: 5 }} alt='MongoDB logo'/>
                 MongoDB
             </Button>
@@ -109,12 +109,12 @@ export const Skills = () => {
             direction="row"
             justifyContent="center"
           >
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={oracle} width="20" height="20" style={{ marginRight: 5 }} alt='Oracle logo'/>
                 Oracle
             </Button>
-            <Button variant="outlined" >REST API</Button>
-            <Button variant="outlined">
+            <Button variant="outlined" style={{ cursor: 'default' }}>REST API</Button>
+            <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={graphql} width="20" height="20" style={{ marginRight: 5 }} alt='GraphQL logo'/>
                 GraphQL
             </Button>

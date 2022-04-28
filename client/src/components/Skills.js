@@ -2,6 +2,8 @@ import { Fragment } from 'react';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
+import StorageIcon from '@mui/icons-material/Storage';
+import ApiIcon from '@mui/icons-material/Api';
 import Title from './Title';
 import python from '../images/python.svg';
 import javascript from '../images/javascript.svg';
@@ -37,7 +39,7 @@ export const Skills = () => {
                 <img src={javascript} width="20" height="20" style={{ marginRight: 5 }} alt='JavaScript logo'/>
                 JavaScript
             </Button>
-            <Button variant="outlined" style={{ cursor: 'default' }}>SQL</Button>
+            <Button variant="outlined" style={{ cursor: 'default' }} startIcon={<StorageIcon/>}>SQL</Button>
           </Stack>
           <Stack
             spacing={2}
@@ -113,7 +115,7 @@ export const Skills = () => {
                 <img src={oracle} width="20" height="20" style={{ marginRight: 5 }} alt='Oracle logo'/>
                 Oracle
             </Button>
-            <Button variant="outlined" style={{ cursor: 'default' }}>REST API</Button>
+            <Button variant="outlined" style={{ cursor: 'default' }} startIcon={<ApiIcon/>}>REST API</Button>
             <Button variant="outlined" style={{ cursor: 'default' }}>
                 <img src={graphql} width="20" height="20" style={{ marginRight: 5 }} alt='GraphQL logo'/>
                 GraphQL

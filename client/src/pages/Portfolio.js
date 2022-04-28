@@ -119,12 +119,12 @@ export const DashboardContent = () => {
                 >
                 </Paper>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} id='Projects'>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Project />
                 </Paper>
               </Grid>
-              <Grid item xs={12}>
+              <Grid item xs={12} id='Contact'>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Contact />
                 </Paper>

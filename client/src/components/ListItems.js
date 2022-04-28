@@ -14,25 +14,37 @@ import image from '../images/headshot.jpeg';
 
 export const mainListItems = (
     <Fragment>
-        <ListItemButton>
+        <ListItemButton
+            component='a'
+            href='#Introduction'
+        >
             <ListItemIcon>
                 <Avatar alt="Remy Sharp" src={image} sx={{ width: 25, height: 25 }}/>
             </ListItemIcon>
             <ListItemText primary="Introduction" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+                component='a'
+                href='#Skills'
+        >
             <ListItemIcon>
                 <CodeIcon />
             </ListItemIcon>
             <ListItemText primary="Skills" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+                component='a'
+                href='#Projects'
+        >
             <ListItemIcon>
                 <DeveloperBoardIcon />
             </ListItemIcon>
             <ListItemText primary="Projects" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+                    component='a'
+                    href='#Contact'
+        >
             <ListItemIcon>
                 <ConnectWithoutContactIcon />
             </ListItemIcon>

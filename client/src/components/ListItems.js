@@ -3,19 +3,20 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import ListSubheader from '@mui/material/ListSubheader';
-import PersonIcon from '@mui/icons-material/Person';
+import Avatar from '@mui/material/Avatar';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import CodeIcon from '@mui/icons-material/Code';
 import DeveloperBoardIcon from '@mui/icons-material/DeveloperBoard';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import image from '../images/headshot.jpeg';
 
 export const mainListItems = (
     <Fragment>
         <ListItemButton>
             <ListItemIcon>
-                <PersonIcon />
+                <Avatar alt="Remy Sharp" src={image} sx={{ width: 30, height: 30 }}/>
             </ListItemIcon>
             <ListItemText primary="Introduction" />
         </ListItemButton>

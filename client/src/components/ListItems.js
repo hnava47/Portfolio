@@ -45,19 +45,31 @@ export const secondaryListItems = (
         <ListSubheader component="div" inset>
         Follow me
         </ListSubheader>
-        <ListItemButton>
+        <ListItemButton
+            component="a"
+            href="https://www.linkedin.com/in/hector-nava-mba/"
+            target="_blank"
+        >
             <ListItemIcon>
                 <LinkedInIcon />
             </ListItemIcon>
             <ListItemText primary="LinkedIn" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+            component="a"
+            href="https://github.com/hnava47"
+            target="_blank"
+        >
             <ListItemIcon>
                 <GitHubIcon />
             </ListItemIcon>
             <ListItemText primary="GitHub" />
         </ListItemButton>
-        <ListItemButton>
+        <ListItemButton
+            component="a"
+            href="https://twitter.com/titonava35"
+            target="_blank"
+        >
             <ListItemIcon>
                 <TwitterIcon />
             </ListItemIcon>

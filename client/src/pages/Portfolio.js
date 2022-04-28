@@ -15,10 +15,11 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 import {
     AppBar,
-    Drawer,
     Contact,
+    Drawer,
     mainListItems,
-    secondaryListItems
+    secondaryListItems,
+    Project
 } from '../components'
 
 const mdTheme = createTheme();
@@ -36,7 +37,7 @@ export const DashboardContent = () => {
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
-              pr: '24px', // keep right padding when drawer closed
+              pr: '24px',
             }}
           >
             <IconButton
@@ -97,8 +98,7 @@ export const DashboardContent = () => {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              {/* Chart */}
-              <Grid item xs={12} md={8} lg={9}>
+              <Grid item xs={12} md={7} lg={8}>
                 <Paper
                   sx={{
                     p: 2,
@@ -108,8 +108,7 @@ export const DashboardContent = () => {
                   }}
                 ></Paper>
               </Grid>
-              {/* Recent Deposits */}
-              <Grid item xs={12} md={4} lg={3}>
+              <Grid item xs={12} md={4} lg={4}>
                 <Paper
                   sx={{
                     p: 2,
@@ -120,7 +119,11 @@ export const DashboardContent = () => {
                 >
                 </Paper>
               </Grid>
-              {/* Recent Orders */}
+              <Grid item xs={12}>
+                <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
+                  <Project />
+                </Paper>
+              </Grid>
               <Grid item xs={12}>
                 <Paper sx={{ p: 2, display: 'flex', flexDirection: 'column' }}>
                   <Contact />

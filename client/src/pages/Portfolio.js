@@ -14,12 +14,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 
 import {
+    Arrows,
     AppBar,
     Contact,
     Drawer,
     mainListItems,
     secondaryListItems,
-    Project
+    Project,
+    Skills
 } from '../components'
 
 const mdTheme = createTheme();
@@ -59,7 +61,7 @@ export const DashboardContent = () => {
               noWrap
               sx={{ flexGrow: 1 }}
             >
-              Dashboard
+              Portfolio
             </Typography>
           </Toolbar>
         </AppBar>
@@ -117,6 +119,28 @@ export const DashboardContent = () => {
                     height: 240,
                   }}
                 >
+                </Paper>
+              </Grid>
+              <Grid item xs={12} md={6} lg={6}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 350,
+                  }}
+                ></Paper>
+              </Grid>
+              <Grid item xs={12} md={6} lg={6}>
+                <Paper
+                  sx={{
+                    p: 2,
+                    display: 'flex',
+                    flexDirection: 'column',
+                    height: 350,
+                  }}
+                >
+                  <Skills />
                 </Paper>
               </Grid>
               <Grid item xs={12} id='Projects'>

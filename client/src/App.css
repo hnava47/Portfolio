@@ -1,8 +1,25 @@
-#profile-pic {
-    background-color: #1877F2;
-    border-radius: 23% 77% 70% 30% / 30% 75% 25% 70%;
+@keyframes arrow {
+    0% {opacity:0}
+    40% {opacity:1}
+    80% {opacity:0}
+    100% {opacity:0}
 }
 
-#headshot {
-    margin-left: 40px;
+.arrows path {
+	stroke: #1877F2;
+	fill: transparent;
+	stroke-width: 1px;
+	animation: arrow 2s infinite;
+}
+
+.arrows path.a1 {
+	animation-delay:-1s;
+}
+
+.arrows path.a2 {
+	animation-delay:-0.5s;
+}
+
+.arrows path.a3 {
+	animation-delay:0s;
 }

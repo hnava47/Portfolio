@@ -10,26 +10,32 @@ const itemData = [
     {
         name: 'socialmediaapp.gif',
         title: 'Social Media App',
+        repo: 'https://github.com/hnava47/SocialMediaAPI'
     },
     {
         name: 'ecommerceapp.gif',
-        title: 'E-Commerce App'
+        title: 'E-Commerce App',
+        repo: 'https://github.com/hnava47/ECommerceApp'
     },
     {
         name: 'weatherdashboard.gif',
-        title: 'Weather Dashboard'
+        title: 'Weather Dashboard',
+        repo: 'https://github.com/hnava47/WeatherDashboardH6'
     },
     {
         name: 'booksearchengine.gif',
-        title: 'Book Search Engine'
+        title: 'Book Search Engine',
+        repo: 'https://github.com/hnava47/BookSearchEngine'
     },
     {
         name: 'codequiz.gif',
-        title: 'Code Quiz'
+        title: 'Code Quiz',
+        repo: 'https://github.com/hnava47/CodeQuizH4'
     },
     {
         name: 'passwordgenerator.gif',
-        title: 'Password Generator'
+        title: 'Password Generator',
+        repo: 'https://github.com/hnava47/PasswordGeneratorH3'
     }
   ];
 
@@ -51,6 +57,9 @@ export const Project = () => {
                             actionIcon={
                             <IconButton
                                 sx={{ color: 'rgba(255, 255, 255, 0.54)' }}
+                                component='a'
+                                href={`${item.repo}`}
+                                target='_blank'
                                 aria-label={`Github repo about ${item.title}`}
                             >
                                 <GitHubIcon />

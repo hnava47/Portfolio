@@ -5,14 +5,31 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Title from './Title';
 
+import {
+    sendMessage
+} from '../utils';
+
 export const Contact = () => {
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
         console.log({
             email: data.get('email'),
             password: data.get('password'),
         });
+
+        try {
+            await sendMessage({
+                email: data.get('email'),
+                firstName: data.get('firstName'),
+                lastName: data.get('lastName'),
+                message: data.get('message')
+            });
+
+
+        } catch (error) {
+            console.log(error);
+        }
     };
 
     return(

@@ -18,8 +18,8 @@ export const Introduction = () => {
         <Fragment>
             <Title>Introduction</Title>
             <ThemeProvider theme={theme}>
-                {description.map((desc) => (
-                    <Typography variant="h5" gutterBottom>
+                {description.map((desc, index) => (
+                    <Typography variant="h5" gutterBottom key={index}>
                         {desc}
                     </Typography>
                 ))}

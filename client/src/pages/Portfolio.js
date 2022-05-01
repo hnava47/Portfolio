@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { useState } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Box from '@mui/material/Box';
@@ -12,13 +12,13 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import headshot from '../images/headshot-removebg.png';
 import logo from '../images/logo.svg';
 
 import {
     AppBar,
     Contact,
     Drawer,
+    Headshot,
     Introduction,
     mainListItems,
     secondaryListItems,
@@ -29,7 +29,7 @@ import {
 const mdTheme = createTheme();
 
 export const DashboardContent = () => {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
   };
@@ -115,19 +115,7 @@ export const DashboardContent = () => {
                 </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={5} align="center">
-                {/* <Paper
-                  sx={{
-                    p: 2,
-                    display: 'flex',
-                    flexDirection: 'column',
-                    height: 500,
-                  }}
-                >
-                  <img src={headshot} alt='Headshot'/>
-                </Paper> */}
-                <div id='profile-pic'>
-                  <img src={headshot} alt='Headshot'/>
-                </div>
+                <Headshot />
               </Grid>
               <Grid item xs={12} md={6} lg={6}>
                 <Paper

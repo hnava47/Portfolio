@@ -12,12 +12,13 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import logo from '../images/logo.svg';
 
 import {
-    Arrows,
     AppBar,
     Contact,
     Drawer,
+    Introduction,
     mainListItems,
     secondaryListItems,
     Project,
@@ -100,23 +101,25 @@ export const DashboardContent = () => {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={7} lg={8}>
+              <Grid item xs={12} md={8} lg={8}>
                 <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 500,
                   }}
-                ></Paper>
+                >
+                  <Introduction />
+                </Paper>
               </Grid>
               <Grid item xs={12} md={4} lg={4}>
-                <Paper
+                <Paper 
                   sx={{
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 240,
+                    height: 500,
                   }}
                 >
                 </Paper>
@@ -124,12 +127,13 @@ export const DashboardContent = () => {
               <Grid item xs={12} md={6} lg={6}>
                 <Paper
                   sx={{
-                    p: 2,
                     display: 'flex',
                     flexDirection: 'column',
                     height: 350,
                   }}
-                ></Paper>
+                >
+                  <img src={logo} className="App-logo" alt='Animated desk'/>
+                </Paper>
               </Grid>
               <Grid item xs={12} md={6} lg={6}>
                 <Paper

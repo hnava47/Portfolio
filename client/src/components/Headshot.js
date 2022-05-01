@@ -2,7 +2,7 @@ import headshot from '../images/headshot-removebg.png';
 
 export const Headshot = () => {
     return (
-        <div id='profile-pic'>
+        <div id='profile-pic' class='custom-shadow'>
             <img src={headshot} alt='Headshot'/>
         </div>
     );

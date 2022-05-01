@@ -12,6 +12,7 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import headshot from '../images/headshot-removebg.png';
 import logo from '../images/logo.svg';
 
 import {
@@ -101,7 +102,7 @@ export const DashboardContent = () => {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={8} lg={8}>
+              <Grid item xs={12} md={8} lg={7} id='Introduction'>
                 <Paper
                   sx={{
                     p: 2,
@@ -113,8 +114,8 @@ export const DashboardContent = () => {
                   <Introduction />
                 </Paper>
               </Grid>
-              <Grid item xs={12} md={4} lg={4}>
-                <Paper 
+              <Grid item xs={12} md={4} lg={5} align="center">
+                {/* <Paper
                   sx={{
                     p: 2,
                     display: 'flex',
@@ -122,7 +123,11 @@ export const DashboardContent = () => {
                     height: 500,
                   }}
                 >
-                </Paper>
+                  <img src={headshot} alt='Headshot'/>
+                </Paper> */}
+                <div id='profile-pic'>
+                  <img src={headshot} alt='Headshot'/>
+                </div>
               </Grid>
               <Grid item xs={12} md={6} lg={6}>
                 <Paper
@@ -135,7 +140,7 @@ export const DashboardContent = () => {
                   <img src={logo} className="App-logo" alt='Animated desk'/>
                 </Paper>
               </Grid>
-              <Grid item xs={12} md={6} lg={6}>
+              <Grid item xs={12} md={6} lg={6} id='Skills'>
                 <Paper
                   sx={{
                     p: 2,

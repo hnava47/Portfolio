@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
 import Stack from '@mui/material/Stack';
 import Divider from '@mui/material/Divider';
 import Button from '@mui/material/Button';
@@ -25,6 +24,12 @@ let theme = createTheme();
 
 theme.typography.button = {
   fontSize: '1.2rem',
+  '@media (max-width:992px)': {
+    fontSize: '.8rem'
+  },
+  '@media (max-width:768px)': {
+    fontSize: '1rem'
+  },
   '@media (max-width:600px)': {
     fontSize: '.5rem'
   }

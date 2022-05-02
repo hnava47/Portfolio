@@ -22,6 +22,16 @@ theme.typography.h5 = {
     }
 }
 
+theme.typography.button = {
+    fontSize: '1.2rem',
+    '@media (max-width:768px)': {
+        fontSize: '1rem'
+    },
+    '@media (max-width:600px)': {
+      fontSize: '.8rem'
+    }
+  }
+
 const description = [
     "Hello! My name is Hector Nava, and I'm a member of the Enterprise Products team at Meta.",
     "I focus on the roadmaps, development, and strategy of our internal products, which support Meta developers and business users in processing and integrating data.",
@@ -39,7 +49,6 @@ export const Introduction = () => {
                         {desc}
                     </Typography>
                 ))}
-            </ThemeProvider>
             <Box
                 sx={{ mt: 1 }}
             >
@@ -53,6 +62,7 @@ export const Introduction = () => {
                     Resume
                 </Button>
             </Box>
+            </ThemeProvider>
         </Fragment>
     );
 }

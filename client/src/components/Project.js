@@ -52,7 +52,7 @@ export const Project = () => {
     return(
         <Fragment>
             <Title>Projects</Title>
-            <ImageList sx={{ width: 'md', height: 600 }} cols={2}>
+            <ImageList sx={{ width: 'md', height: 750 }} cols={2}>
                 {itemData.map((item) => (
                     <ImageListItem key={item.name}>
                         <img

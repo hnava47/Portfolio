@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Portfolio from './pages/Portfolio';
+import { Portfolio } from './pages';
 
 function App() {
   return (

@@ -96,7 +96,6 @@ export const Contact = () => {
                                 fullWidth
                                 id="firstName"
                                 label="First Name"
-                                autoFocus
                                 value={firstName}
                                 onChange={(event) => setFirstName(event.target.value)}
                             />

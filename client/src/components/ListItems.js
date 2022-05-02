@@ -42,8 +42,8 @@ export const mainListItems = (
             <ListItemText primary="Projects" />
         </ListItemButton>
         <ListItemButton
-                    component='a'
-                    href='#Contact'
+                component='a'
+                href='#Contact'
         >
             <ListItemIcon>
                 <ConnectWithoutContactIcon />

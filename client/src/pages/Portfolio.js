@@ -27,7 +27,7 @@ import {
 
 const mdTheme = createTheme();
 
-export const DashboardContent = () => {
+export const Portfolio = () => {
   const [open, setOpen] = useState(false);
   const toggleDrawer = () => {
     setOpen(!open);
@@ -151,6 +151,4 @@ export const DashboardContent = () => {
   );
 }
 
-export default function Dashboard() {
-  return <DashboardContent />;
-}
+export default Portfolio;

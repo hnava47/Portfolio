@@ -5,8 +5,7 @@
 <!-- Project Logo -->
 <br/>
 <div align="center">
-    <img src="./public/img/readmelogo.png" alt="Logo" width="80" height="80">
-    <h1 align="center">Portfolio H16</h1>
+    <h1 align="center">Personal Portfolio</h1>
 </div>
 
 <!-- Table of Contents -->
@@ -26,7 +25,7 @@ This project is meant to create and develop a personal portfolio page. This page
 
 
 You can access the updated website at the following link:
-* [Deployed Application]()
+* [Deployed Application](https://www.hectorrnava.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -39,3 +38,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 Hector Nava - hector.r.nava44@gmail.com
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+<!-- MARKDOWN LINKS & IMAGES -->
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://linkedin.com/in/hector-nava-mba

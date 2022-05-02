@@ -47,6 +47,7 @@ export const Portfolio = () => {
             }}
           >
             <IconButton
+              id="drawerButton"
               edge="start"
               color="inherit"
               aria-label="open drawer"

@@ -14,37 +14,6 @@
 
 }
 
-@keyframes arrow {
-    0% {opacity:0}
-    40% {opacity:1}
-    80% {opacity:0}
-    100% {opacity:0}
-}
-
-.arrows path {
-	stroke: #1877F2;
-	fill: transparent;
-	stroke-width: 1px;
-	animation: arrow 2s infinite;
-}
-
-.arrows path.a1 {
-	animation-delay:-1s;
-}
-
-.arrows path.a2 {
-	animation-delay:-0.5s;
-}
-
-.arrows path.a3 {
-	animation-delay:0s;
-}
-
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-
 @media (prefers-reduced-motion: no-preference) {
 .App-logo {
     animation: App-logo-spin infinite 20s linear;
@@ -57,5 +26,11 @@
     }
     to {
         transform: rotate(360deg);
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    #drawerButton {
+        display: none;
     }
 }

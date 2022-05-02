@@ -1,5 +1,5 @@
 import { Fragment } from 'react';
-import { createTheme, responsiveFontSizes, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -8,7 +8,19 @@ import Title from './Title';
 import resume from '../documents/HectorNavaResume.pdf';
 
 let theme = createTheme();
-theme = responsiveFontSizes(theme);
+
+theme.typography.h5 = {
+    fontSize: '1.5rem',
+    '@media (max-width:992px)': {
+        fontSize: '1.3rem'
+    },
+    '@media (max-width:768px)': {
+        fontSize: '1.2rem'
+    },
+    '@media (max-width:600px)': {
+        fontSize: '1.1rem'
+    }
+}
 
 const description = [
     "Hello! My name is Hector Nava, and I'm a member of the Enterprise Products team at Meta.",

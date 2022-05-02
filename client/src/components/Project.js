@@ -1,4 +1,4 @@
-import { Fragment } from 'react';
+import { Fragment, useState, useEffect } from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
@@ -48,11 +48,33 @@ const itemData = [
   ];
 
 export const Project = () => {
+    const breakpoints = {
+        sm: 600,
+        md: 960
+    };
+
+    const getColumns = (width) => {
+        if (width < breakpoints.md) {
+            return 1
+        } else {
+            return 2
+        }
+    };
+
+    const [columns, setColumns] = useState(getColumns(window.innerWidth));
+    const updateDimensions = () => {
+        setColumns(getColumns(window.innerWidth));
+    };
+
+    useEffect(() => {
+        window.addEventListener("resize", updateDimensions);
+        return () => window.removeEventListener("resize", updateDimensions);
+    }, []);
 
     return(
         <Fragment>
             <Title>Projects</Title>
-            <ImageList sx={{ width: 'md', height: 750 }} cols={2}>
+            <ImageList sx={{ width: 'md', height: 750 }} cols={columns}>
                 {itemData.map((item) => (
                     <ImageListItem key={item.name}>
                         <img

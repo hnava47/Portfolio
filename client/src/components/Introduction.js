@@ -18,7 +18,7 @@ theme.typography.h5 = {
         fontSize: '1.2rem'
     },
     '@media (max-width:600px)': {
-        fontSize: '1.1rem'
+        fontSize: '1rem'
     }
 }
 

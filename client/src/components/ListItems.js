@@ -19,7 +19,7 @@ export const mainListItems = (
             href='#Introduction'
         >
             <ListItemIcon>
-                <Avatar alt="Remy Sharp" src={image} sx={{ width: 25, height: 25 }}/>
+                <Avatar alt="Hector Nava" src={image} sx={{ width: 25, height: 25 }}/>
             </ListItemIcon>
             <ListItemText primary="Introduction" />
         </ListItemButton>

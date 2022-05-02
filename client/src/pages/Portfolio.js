@@ -95,7 +95,7 @@ export const Portfolio = () => {
           <Toolbar />
           <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
             <Grid container spacing={3}>
-              <Grid item xs={12} md={8} lg={7} id='Introduction'>
+              <Grid item xs={12} md={9} lg={7} id='Introduction'>
                 <Paper
                   sx={{
                     p: 2,
@@ -107,7 +107,7 @@ export const Portfolio = () => {
                   <Introduction />
                 </Paper>
               </Grid>
-              <Grid item xs={12} md={4} lg={5} align="center">
+              <Grid item xs={12} md={3} lg={5} align="center">
                 <Headshot />
               </Grid>
               <Grid item xs={12} md={6} lg={6}>

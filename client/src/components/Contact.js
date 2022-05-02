@@ -1,34 +1,78 @@
-import { Fragment } from 'react';
+import { Fragment, useState, forwardRef, useEffect } from 'react';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
 import Title from './Title';
 
 import {
     sendMessage
 } from '../utils';
 
+const Alert = forwardRef(function snackAlert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+});
+
 export const Contact = () => {
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [snackPack, setSnackPack] = useState([]);
+    const [open, setOpen] = useState(false);
+    const [messageInfo, setMessageInfo] = useState(undefined);
+
+    useEffect(() => {
+        if (snackPack.length && !messageInfo) {
+            setMessageInfo({ ...snackPack[0] });
+            setSnackPack((prev) => prev.slice(1));
+            setOpen(true);
+        } else if (snackPack.length && messageInfo && open) {
+            setOpen(false);
+        }
+    }, [snackPack, messageInfo, open]);
+
+    const handleClick = (message, severity) => {
+        setSnackPack((prev) => [...prev, { message, severity, key: new Date().getTime() }]);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    const handleExited = () => {
+        setMessageInfo(undefined);
+    };
+
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        console.log({
-            email: data.get('email'),
-            password: data.get('password'),
-        });
+
+        if (!email || !firstName || !lastName || !message) {
+            return handleClick('Contact message did not send. All fields must be defined!', 'error');
+        }
 
         try {
             await sendMessage({
-                email: data.get('email'),
-                firstName: data.get('firstName'),
-                lastName: data.get('lastName'),
-                message: data.get('message')
+                email,
+                firstName,
+                lastName,
+                message
             });
 
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setMessage('');
 
+            handleClick('Message successfully sent', 'success');
         } catch (error) {
-            console.log(error);
+            handleClick(error, 'error');
         }
     };
 
@@ -53,6 +97,8 @@ export const Contact = () => {
                                 id="firstName"
                                 label="First Name"
                                 autoFocus
+                                value={firstName}
+                                onChange={(event) => setFirstName(event.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -63,6 +109,8 @@ export const Contact = () => {
                                 label="Last Name"
                                 name="lastName"
                                 autoComplete="family-name"
+                                value={lastName}
+                                onChange={(event) => setLastName(event.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -73,6 +121,8 @@ export const Contact = () => {
                                 label="Email Address"
                                 name="email"
                                 autoComplete="email"
+                                value={email}
+                                onChange={(event) => setEmail(event.target.value)}
                             />
                         </Grid>
                         <Grid item xs={12}>
@@ -84,6 +134,8 @@ export const Contact = () => {
                                 name="message"
                                 label="Message"
                                 id="message"
+                                value={message}
+                                onChange={(event) => setMessage(event.target.value)}
                             />
                         </Grid>
                     </Grid>
@@ -96,6 +148,21 @@ export const Contact = () => {
                     </Button>
                 </Box>
             </Box>
+            <Snackbar
+                key={messageInfo ? messageInfo.key : undefined}
+                open={open}
+                autoHideDuration={6000}
+                onClose={handleClose}
+                TransitionProps={{ onExited: handleExited }}
+            >
+                <Alert
+                    onClose={handleClose}
+                    severity={messageInfo ? messageInfo.severity : undefined}
+                    sx={{ width: '100%' }}
+                >
+                    {messageInfo ? messageInfo.message : undefined}
+                </Alert>
+            </Snackbar>
         </Fragment>
   );
 }

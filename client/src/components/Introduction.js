@@ -9,7 +9,7 @@ import resume from '../documents/HectorNavaResume.pdf';
 
 let theme = createTheme();
 
-theme.typography.h5 = {
+theme.typography.body1 = {
     fontSize: '1.5rem',
     '@media (max-width:992px)': {
         fontSize: '1.3rem'
@@ -45,7 +45,7 @@ export const Introduction = () => {
             <Title>Introduction</Title>
             <ThemeProvider theme={theme}>
                 {description.map((desc, index) => (
-                    <Typography variant="h5" gutterBottom key={index}>
+                    <Typography variant="body1" gutterBottom key={index}>
                         {desc}
                     </Typography>
                 ))}

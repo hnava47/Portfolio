@@ -119,7 +119,7 @@ export const Portfolio = () => {
                     height: 350,
                   }}
                 >
-                  <img src={logo} className="App-logo" alt='Animated desk'/>
+                  <img src={logo} className="App-logo" alt='Animated desk' style = {{ width: "inherit", height:"inherit"}}/>
                 </Paper>
               </Grid>
               <Grid item xs={12} md={6} lg={6} id='Skills'>

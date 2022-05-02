@@ -28,7 +28,9 @@ export const Introduction = () => {
                     </Typography>
                 ))}
             </ThemeProvider>
-            <Box>
+            <Box
+                sx={{ mt: 1 }}
+            >
                 <Button
                     variant='outlined'
                     startIcon={<FileDownloadIcon />}

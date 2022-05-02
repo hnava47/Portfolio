@@ -101,7 +101,7 @@ export const Portfolio = () => {
                     p: 2,
                     display: 'flex',
                     flexDirection: 'column',
-                    height: 500,
+                    height: 510,
                   }}
                 >
                   <Introduction />
